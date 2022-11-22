@@ -1,0 +1,62 @@
+//Cuadrados
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int ladoA,ladoB;
+	float resultadoArea;
+	float resultadoPerimetro;
+	int selec;
+	do
+	{
+		printf("Ingrese Que Desea Obtener:\n1)Area Del Cuadrado\n2)Perimetro Del Cuadrado\n3)Area De Un Rectangulo\n4)Perimetro Del Rectangulo\n5)Regresar Al Menu\n");
+		scanf("%i",&selec);
+		fflush(stdin);
+		switch (selec)
+		{
+		case 1:
+			printf("Ingrese el tamaño del lado del cuadrado \n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			resultadoArea=ladoA*ladoA;
+			printf("El Resultado Del Area Es: %f\n", resultadoArea);
+			break;
+		case 2:
+			printf("Ingrese El Tamaño Del Lado Del Cuadrado \n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			resultadoPerimetro=ladoA*4;
+			printf("El Resultado Del Perimetro Es: %f\n", resultadoPerimetro);
+			break;
+		case 3:
+			printf("Ingrese El Lado De Menor Tamaño Del Rectangulo \n");
+			scanf("%d",&ladoA);
+			printf("Ingrese El Lado De Mayor Tamaño Del Rectangulo \n");
+			scanf("%d",&ladoB);
+			fflush(stdin);
+			resultadoArea=ladoA*ladoB;
+			printf("El resultado del Area es: %f\n", resultadoArea);
+			break;
+		case 4:
+			printf("Ingrese El Lado De Menor Tamaño Del Rectangulo\n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			printf("Ingrese El Lado De Mayor Tamaño Del Rectangulo \n");
+			scanf("%d",&ladoB);
+			fflush(stdin);
+			resultadoPerimetro=((ladoA*2)+(ladoB*2));
+			printf("El Resultado Del Perimetro Es: %f\n", resultadoPerimetro);
+			break;
+		case 5:
+			printf("Gracias Por Usar Esta Funcion :)\n");
+			break;
+		default:
+			printf("\nLa Opcion No Se Puede Llevar A Acabo, Vuelva A Intentar Con Una De Las Opciones Señaladas\n");
+			fflush(stdin);
+			break;
+		}
+	}while(selec!=5);
+	return 0;
+}
