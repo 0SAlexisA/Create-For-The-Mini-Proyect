@@ -29,7 +29,11 @@ int  main(){
 	
 	int ladoC;
 	int altura;
-	char selec1;
+	
+	
+	
+
+	
 	
 	//caso 4
 	int F,C, i,j;
@@ -69,7 +73,7 @@ int  main(){
 //Conversion De Grados
 
 case 1:
-		printf("Opcion 1", opcion);
+		printf("\n", opcion);
 		{
 	do
 	{
@@ -125,7 +129,7 @@ case 1:
 //Obtencion de Area o Perimetro de Cuadrado O Rectangulo
 
 case 2:
-		printf("Opcion 2",opcion);
+		printf("\n",opcion);
 		{
 		do
 	{
@@ -185,57 +189,58 @@ break;
 //Obtencion de Area o Perimetro del triangulo	
 	
 		case 3:
-		printf("Opcion 3",opcion);
-		{
+		printf("\n",opcion);
+	{
 		do
 	{
-		printf("Ingrese Que Desea Obtener:\n 1)Area De El Triangulo\n2)Perimetro De Un triangulo\n3)Regresar Al Menu\n");
-		scanf("%c",&selec1);
+		printf("\nIngrese que desea obtener:\n 1)Area de el triangulo\n 2)Perimetro de un triangulo\n 3)Regresar al menu\n");
+		scanf("%i",&selec);
 		fflush(stdin);
 		switch (selec)
 		{
-		case '1':
-			printf("Ingrese La Base Del Triangulo: \n");
+		case 1:
+			printf("Ingrese la base del triangulo: \n");
 			scanf("%d",&ladoA);
 			fflush(stdin);
-			printf("Ingrese La Altura Del Triangulo: \n");
+			printf("Ingrese la altura del triangulo: \n");
 			scanf("%d",&altura);
 			fflush(stdin);
 			resultadoArea=((ladoA*altura)/2);
-			printf("El Resultado Es: %f\n", resultadoArea);
+			printf("El resultado es: %f\n", resultadoArea);
 
 			break;
-		case '2':
-			printf("Ingrese El Lado A Del Triangulo: \n");
+		case 2:
+			printf("Ingrese el lado A del triangulo: \n");
 			scanf("%d",&ladoA);
 			fflush(stdin);
-			printf("Ingrese El Lado B Del Triangulo: \n");
+			printf("Ingrese el lado B del triangulo: \n");
 			scanf("%d",&ladoB);
 			fflush(stdin);
-			printf("Ingrese El Lado C Del Triangulo: \n");
+			printf("Ingrese el lado C del triangulo: \n");
 			scanf("%d",&ladoC);
 			fflush(stdin);
 			resultadoPerimetro=ladoA+ladoB+ladoC;
 			printf("El resultado es: %f\n", resultadoPerimetro);
 			break;
-		case '3':
-			printf("Gracias Por Usar Este Programa 7u7 \n");
+		case 3:
+			printf("Gracias por usar esta funcion :)\n");
 			break;
 		default:
-			printf("\nLa Opcion No Es La Correcta, Vuelva A Intentar\n");
+			printf("\nLa opcion no es la correcta, vuelva a intentar\n");
 			fflush(stdin);
 			break;
 		}
-	}while (selec!='C');
+	}while(selec!=3);
 	return 0;
 }
+		
 		
 break;
 
 //Matrices 2*2\n o Matrices 10*10 (1)
 
 		case 4:
-		printf("Opcion 4",opcion);
+		printf("\n",opcion);
 			printf("Inserte El Numero De Filas Requeridas\n");
 	scanf("%d",&F);
 	printf("Inserte El Numero De Las Columnas Requeridas\n");
@@ -291,7 +296,7 @@ break;
 	{
 	do
 	{
-		printf("Ingrese Que Desea Obtener:\n 1)Matrix 2*2\n 2)Matriz 10*10\n");
+		printf("\n Ingrese Que Desea Obtener:\n 1)Matrix 2*2\n 2)Matriz 10*10\n");
 		scanf("%i",&selec);
 		fflush(stdin);
 		switch(selec)
@@ -333,7 +338,7 @@ break;
 }
 }
 
-		printf("\n\n\t\tMatriz Original");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n\t\tMatriz");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
 		printf("\n\n");
 	for(i = 0;i < reng;i++){
 		printf("\n\t\t");
@@ -360,14 +365,14 @@ break;
 //Factorial
 		
 		case 6:
-		printf("Opcion 6",opcion);
+		printf("\n",opcion);
 			cout<<"Digite Un Numero: "; cin>>numero;
 	
 	for (int i=1;i<=numero;i++){
 	 factorial *=i;
 	}
 	
-	cout<<"\n El Factorial El Numero es"<<factorial<<endl;
+	cout<<"\nEl Factorial El Numero es:\n\n"<<factorial<<endl;
 	
 	system("pause");
 	
@@ -377,7 +382,7 @@ break;
 //Matrices (3)	
 		
 		case 7:
-			printf("Opcion 7",opcion);
+			printf("\n",opcion);
 		printf("Cuantas Columnas Necesitas ");
 			scanf("%d", &col);
 		printf("Cuantos Renglones Necesitas ");
@@ -415,17 +420,26 @@ break;
 		case 8:
 		printf("\n Opcion 8",opcion);
 		
-		cout<<"\nIngrese las horas trabajadas:\n";cin>>horasLaboradas;
-		cout<<"\nIngrese la tarifa:\n";cin>>costoHora;
+	cout<<"Ingrese las horas trabajadas:\n";cin>>horasLaboradas;
+	cout<<"Ingrese la tarifa:\n";cin>>costoHora;
+	
+	salarioSinIva= (horasLaboradas*costoHora);
+	cout<<"El salario sin iva es: \n"<<salarioSinIva;
+	
+	salarioConIva = (salarioSinIva * .16) + salarioSinIva ;
+	cout<<" \n El salario con iva es: \n"<<salarioConIva;
+	
+	salarioRetencion =(salarioConIva *.12);
+	cout<<" \n La Retencion es: \n"<<salarioRetencion;
+	
+	
+	salarioTotal = salarioConIva - salarioRetencion;
+	cout<<"\n El salario neto es: \n"<<salarioTotal;
 		
-			salarioSinIva= (horasLaboradas*costoHora);
-			salarioConIva = (salarioSinIva * .16) + salarioSinIva ;
-			salarioRetencion =(salarioConIva *.12);
-			salarioTotal = salarioConIva - salarioRetencion;
-			
-			if(salarioTotal<10000){
+	
+	if(salarioTotal<10000){
 		salarioTotal=(salarioTotal*.05) + salarioTotal;
-		cout<<"\n El salario del trabajador es:"<<salarioTotal;
+		cout<<"\n El salario del trabajador Con Abono es:"<<salarioTotal;
 	
 	}
 	else{
