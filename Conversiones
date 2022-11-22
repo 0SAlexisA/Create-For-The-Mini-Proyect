@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	int selec;
 	do
 	{
-		printf("Ingrese La Opción Que Requiera:\n1)Celcius a Kelvin y Farenheit\n2)Kelvin a Celcius y Farenheit\n3)Farenheit a Celcius y kelvin\n4)Regresar al menu\n");
+		printf("Ingrese La Opción Que Requiera:\n1)Celcius a Kelvin y Farenheit\n 2)Kelvin a Celcius y Farenheit\n 3)Farenheit a Celcius y kelvin\n 4)Regresar al menu\n");
 		scanf("%i",&selec);
 		fflush(stdin);
 		switch(selec)
