@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+	float salarioSinIva=0;
+	float costoHora=0;
+	float horasLaboradas=0;
+	float salarioConIva=0;
+	float salarioTotal=0;
+	float salarioRetencion;
+	
+	cout<<"Ingrese las horas trabajadas:\n";cin>>horasLaboradas;
+	cout<<"Ingrese la tarifa:\n";cin>>costoHora;
+	
+	salarioSinIva= (horasLaboradas*costoHora);
+	cout<<"El salario sin iva es: \n"<<salarioSinIva;
+	
+	salarioConIva = (salarioSinIva * .16) + salarioSinIva ;
+	cout<<" \n El salario con iva es: \n"<<salarioConIva;
+	
+	salarioRetencion =(salarioConIva *.12);
+	cout<<" \n El salarioRetencion es: \n"<<salarioRetencion;
+	
+	
+	salarioTotal = salarioConIva - salarioRetencion;
+	cout<<"\n El salario total es: \n"<<salarioTotal;
+		
+	
+	if(salarioTotal<10000){
+		salarioTotal=(salarioTotal*.05) + salarioTotal;
+		cout<<"\n El salario del trabajador es:"<<salarioTotal;
+	
+	}
+	else{
+		
+	cout<<"\n El salario del trabajador es:"<<salarioTotal;
+	}
+	
+
+	
+	
+	return 0; 
+}
