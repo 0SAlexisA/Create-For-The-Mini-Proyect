@@ -1,2 +1,2 @@
 # New Clase
-//Para el Mini Proyecto
+Para el Mini Proyecto
