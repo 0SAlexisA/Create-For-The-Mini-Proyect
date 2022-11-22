@@ -1,0 +1,433 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<iostream>
+#define N 10
+#define M 10
+#define MAX 2
+#define L 3
+
+
+using namespace std;
+
+
+int  main(){
+	
+		
+	
+	//Caso 1
+	float gradosC,gradosF,gradosK;
+	float conversionC,conversionF,conversionK;
+	int selec;
+	//caso 2
+	
+	
+	int ladoA,ladoB;
+	float resultadoArea;
+	float resultadoPerimetro;
+	
+	//caso 3
+	
+	int ladoC;
+	int altura;
+	char selec1;
+	
+	//caso 4
+	int F,C, i,j;
+	int mac1[N][M],mac2[N][M];
+	int macR[N][M];
+	
+	//caso 5
+
+	int matriz[MAX][MAX], col, reng;
+	//Caso 6 
+	
+		int numero, factorial = 1;
+	
+	//Caso 7
+	
+	
+	
+	//Caso 8
+	
+	
+	
+	
+	// variable para la opcion de menu
+	int opcion; 
+	
+	//Do realiza lo que va a llevar a cabo primero
+	do{
+	printf("Selecciona el menu que corresponde\n 1)Conversion De Grados\n 2)Obtencion de Area o Perimetro de Cuadrado O Rectangulo\n 3)Obtencion de Area o Perimetro del triangulo\n 4)Matrices 2*2 o Matrices 10*10\n 5)Multiplicacion de Matrices\n 6)Factorial\n 7)Matrices 3\n 8)x \n");
+		scanf("%d",&opcion);	
+	
+		//lee opciones
+		
+	switch(opcion){
+
+//Conversion De Grados
+
+case 1:
+		printf("Opcion 1", opcion);
+		{
+	do
+	{
+		printf("Ingrese que desea obtener:\n1)Celcius a Kelvin y Farenheit\n2)Kelvin a Celcius y Farenheit\n3)Farenheit a Celcius y kelvin\n4)Regresar al menu\n");
+		scanf("%i",&selec);
+		fflush(stdin);
+		switch(selec)
+		{
+		case 1:
+			printf("Ingrese los grados \n");
+			scanf("%f",&gradosC);
+			fflush(stdin);
+			conversionF=(gradosC*(1.8))+32;
+			conversionK=gradosC+ 273.15;
+			printf("Los grados en Farenheit son: %f\n", conversionF);
+			printf("Los grados en Kelvin son: %f\n", conversionK);
+			fflush(stdin);
+			break;
+		case 2:
+			printf("Ingrese los grados \n");
+			scanf("%f",&gradosF);
+			fflush(stdin);
+			conversionC=(gradosF-32)*(.555);
+			conversionK=((.555)*(gradosF-32))+273.15;
+			printf("Los grados en Kelvin son: %f\n", conversionK);
+			printf("Los grados en Celcius son: %f\n", conversionC);
+			fflush(stdin);
+			break;
+		case 3:
+			printf("Ingrese los grados \n");
+			scanf("%f",&gradosK);
+			fflush(stdin);
+			conversionC=gradosK-273.15;
+			conversionF=((gradosK-273.15)*(1.8))+32;
+			printf("Los grados en Celcius son: %f\n", conversionC);
+			printf("Los grados en Farenheit son: %f\n", conversionF);
+			fflush(stdin);
+			break;
+		case 4:
+			printf("Gracias por usar esta funcion :)\n");
+			break;
+		default:
+			printf("\nLa opcion no es la correcta, vuelva a intentar\n");
+			fflush(stdin);
+			break;
+		}
+
+	}while(selec!=4);
+	return 0;
+}
+		break;
+
+//Obtencion de Area o Perimetro de Cuadrado O Rectangulo
+
+case 2:
+		printf("Opcion 2",opcion);
+		{
+		do
+	{
+		printf("Ingrese que desea obtener:\n1)Area del Cuadrado\n2)Perimetro del cuadrado\n3)Area de un rectangulo\n4)Perimetro del rectangulo\n5)Regresar al menu\n");
+		scanf("%i",&selec);
+		fflush(stdin);
+		switch (selec)
+		{
+		case 1:
+			printf("Ingrese el lado del cuadrado \n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			resultadoArea=ladoA*ladoA;
+			printf("El resultado del Area es: %f\n", resultadoArea);
+			break;
+		case 2:
+			printf("Ingrese el lado del cuadrado \n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			resultadoPerimetro=ladoA*4;
+			printf("El resultado del perimetro es: %f\n", resultadoPerimetro);
+			break;
+		case 3:
+			printf("Ingrese el lado menor del rectangulo \n");
+			scanf("%d",&ladoA);
+			printf("Ingrese el lado mayor del rectangulo \n");
+			scanf("%d",&ladoB);
+			fflush(stdin);
+			resultadoArea=ladoA*ladoB;
+			printf("El resultado del Area es: %f\n", resultadoArea);
+			break;
+		case 4:
+			printf("Ingrese el lado menor del rectangulo\n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			printf("Ingrese el lado mayor del rectangulo \n");
+			scanf("%d",&ladoB);
+			fflush(stdin);
+			resultadoPerimetro=((ladoA*2)+(ladoB*2));
+			printf("El resultado del perimetro es: %f\n", resultadoPerimetro);
+			break;
+		case 5:
+			printf("Gracias por usar esta funcion :)\n");
+			break;
+		default:
+			printf("\nLa opcion no es la correcta, vuelva a intentar\n");
+			fflush(stdin);
+			break;
+		}
+	}while(selec!=5);
+	return 0;
+}
+		
+		
+break;
+	
+//Obtencion de Area o Perimetro del triangulo	
+	
+		case 3:
+		printf("Opcion 3",opcion);
+		{
+		do
+	{
+		printf("Ingrese que desea obtener:\n A)Area de el triangulo\nB)Perimetro de un triangulo\nC)Regresar al menu\n");
+		scanf("%c",&selec1);
+		fflush(stdin);
+		switch (selec)
+		{
+		case 'A':
+			printf("Ingrese la base del triangulo: \n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			printf("Ingrese la altura del triangulo: \n");
+			scanf("%d",&altura);
+			fflush(stdin);
+			resultadoArea=((ladoA*altura)/2);
+			printf("El resultado es: %f\n", resultadoArea);
+
+			break;
+		case 'B':
+			printf("Ingrese el lado A del triangulo: \n");
+			scanf("%d",&ladoA);
+			fflush(stdin);
+			printf("Ingrese el lado B del triangulo: \n");
+			scanf("%d",&ladoB);
+			fflush(stdin);
+			printf("Ingrese el lado C del triangulo: \n");
+			scanf("%d",&ladoC);
+			fflush(stdin);
+			resultadoPerimetro=ladoA+ladoB+ladoC;
+			printf("El resultado es: %f\n", resultadoPerimetro);
+			break;
+		case 'C':
+			printf("Gracias por usar esta funcion :)\n");
+			break;
+		default:
+			printf("\nLa opcion no es la correcta, vuelva a intentar\n");
+			fflush(stdin);
+			break;
+		}
+	}while (selec!='C');
+	return 0;
+}
+		
+break;
+
+//Matrices 2*2\n o Matrices 10*10 (1)
+
+		case 4:
+		printf("Opcion 4",opcion);
+			printf("Ingrese el numero de filas\n");
+	scanf("%d",&F);
+	printf("ingrese el numero de las columnas\n");
+	scanf("%d",&C);
+
+	printf("Primer matriz\n");
+	for(i=0;i<F;i++)
+	{
+		for (j = 0;j<C;j++)
+		{
+			printf("Ingresa el valor de [%d][%d]\n",i,j );
+			scanf("%d",&mac1[i][j]);
+			//fflush(stdin);
+		}
+	}
+	printf("Segunda matriz\n");
+	for(i=0;i<F;i++)
+	{
+		for (j = 0;j<C;j++)
+		{
+			printf("Ingresa el valor de [%d][%d]\n",i,j );
+			scanf("%d",&mac2[i][j]);
+			//fflush(stdin);
+		}
+	}
+	for(i=0;i<F;i++)
+	{
+		for (j = 0; j < C; j++)
+		{
+			macR[i][j]=mac1[i][j]+mac2[i][j];
+		}
+	}
+	printf("Matriz resultado\n");
+	for(i=0;i<F;i++)
+	{
+		for (j = 0; j < C; j++)
+		{
+			//printf("Ingresa el valor de [%i][%i]\n",i++,j++ );
+			//scanf("%i",&macR[i][j]);
+			printf("%d\t",macR[i][j]);
+		}
+		printf("\n");
+	}
+
+
+	return 0;	
+break;
+
+//Multiplicacion de Matrices (2)
+
+		case 5:
+
+	{
+	do
+	{
+		printf("Ingrese que desea obtener:\n 1)Matrix 2*2\n 2)Matriz 10*10\n");
+		scanf("%i",&selec);
+		fflush(stdin);
+		switch(selec)
+		{
+	case 1:
+			printf("Cuantas columnas necesitas ");
+			scanf("%d", &col);
+		printf("Cuantos renglones necesitas ");
+			scanf("%d", &reng);
+	for(i = 0;i < reng;i++)//Lee los datos que se nos otorgan es decir las columnas y renglones
+{
+	for(j = 0;j < col;j++){
+		printf("Cuales son los valores de [%d][%d]==>\t", i+1, j+1);
+			scanf("%d", &matriz[i][j]);
+}
+}
+
+		printf("\n\n\t\tMatriz 2*2");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n");
+	for(i = 0;i < reng;i++){
+		printf("\n\t\t");
+	for(j = 0;j < col;j++){
+		printf(" %6d ", matriz[i][j]);
+}
+}
+			
+			
+	break;
+		case 2:
+				printf("Cuantas columnas necesitas ");
+			scanf("%d", &col);
+		printf("Cuantos renglones necesitas ");
+			scanf("%d", &reng);
+	for(i = 0;i < reng;i++)//Lee los datos que se nos otorgan es decir las columnas y renglones
+{
+	for(j = 0;j < col;j++){
+		printf("Cuales son los valores de [%d][%d]==>\t", i+1, j+1);
+			scanf("%d", &matriz[i][j]);
+}
+}
+
+		printf("\n\n\t\tMatriz original");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n");
+	for(i = 0;i < reng;i++){
+		printf("\n\t\t");
+	for(j = 0;j < col;j++){
+		printf(" %6d ", matriz[i][j]);
+}
+}
+
+
+			break;
+		default:
+			printf("\nLa opcion no es la correcta, vuelva a intentar\n");
+			fflush(stdin);
+			break;
+		}
+
+	}while(selec!=2);
+	return 0;
+}
+	
+	
+		break;
+		
+//Factorial
+		
+		case 6:
+		printf("Opcion 6",opcion);
+			cout<<"Digite un numero: "; cin>>numero;
+	
+	for (int i=1;i<=numero;i++){
+	 factorial *=i;
+	}
+	
+	cout<<"\n El factorial el numero es"<<factorial<<endl;
+	
+	system("pause");
+	
+	return 0;
+		break;
+		
+//Matrices (3)	
+		
+		case 7:
+		printf("Cuantas columnas necesitas ");
+			scanf("%d", &col);
+		printf("Cuantos renglones necesitas ");
+			scanf("%d", &reng);
+	for(i = 0;i < reng;i++)//Lee los datos que se nos otorgan es decir las columnas y renglones
+{
+	for(j = 0;j < col;j++){
+		printf("Cuales son los valores de [%d][%d]==>\t", i+1, j+1);
+			scanf("%d", &matriz[i][j]);
+}
+}
+
+		printf("\n\n\t\tMatriz original");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n");
+	for(i = 0;i < reng;i++){
+		printf("\n\t\t");
+	for(j = 0;j < col;j++){
+		printf(" %6d ", matriz[i][j]);
+}
+}
+
+		printf("\n\n\t\tMatriz transpuesta");//Imprime el tipo de matriz (inversa)
+		printf("\n\n");
+	for(i = 0;i < col;i++){
+		printf("\n\t\t");
+	for(j = 0;j < reng;j++){
+		printf(" %6d ", matriz[j][i]);
+}
+}
+		printf("\n\n\n");
+		break;
+		
+//X		
+		
+		case 8:
+		printf("Opcion 8",opcion);
+		break;
+		
+		
+		
+		
+		
+		
+		default:
+		printf("Opcion es erronea \n ");
+		break;
+		
+		
+		
+		
+		}
+	}while(opcion !=6);
+	return 0;
+	 //While la reiteraci[on del programa sea diferente a 7
+
+}
