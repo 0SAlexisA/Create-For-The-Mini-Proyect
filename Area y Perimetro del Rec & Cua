@@ -1,4 +1,4 @@
-//Cuadrados
+//Cuadrado y Rectangulo
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 	int selec;
 	do
 	{
-		printf("Ingrese Que Desea Obtener:\n1)Area Del Cuadrado\n2)Perimetro Del Cuadrado\n3)Area De Un Rectangulo\n4)Perimetro Del Rectangulo\n5)Regresar Al Menu\n");
+		printf("Ingrese la opcion que desea realizar :\n1)Area Del Cuadrado\n 2)Perimetro Del Cuadrado\n 3)Area De Un Rectangulo\n 4)Perimetro Del Rectangulo\n 5)Regresar Al Menu\n");
 		scanf("%i",&selec);
 		fflush(stdin);
 		switch (selec)
