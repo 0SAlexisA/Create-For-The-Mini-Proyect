@@ -14,12 +14,12 @@ int main(int argc, char *argv[]) {
 	//Inicializamos el Do-while el cual se va a 
 	do
 	{
-		printf("Ingrese que desea obtener:\n1)Area de el triangulo\n2)Perimetro de un triangulo\n3)Regresar al menu\n");
+		printf("Ingrese que desea obtener:\n 1)Area de el triangulo\n 2)Perimetro de un triangulo\n 3)Regresar al menu\n");
 		scanf("%c",&selec);
 		fflush(stdin);
 		switch (selec)
 		{
-		case 'A':
+		case '1':
 			printf("Ingrese la base del triangulo: \n");
 			scanf("%d",&ladoA);
 			fflush(stdin);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 			printf("El resultado es: %f\n", resultadoArea);
 
 			break;
-		case 'B':
+		case '2':
 			printf("Ingrese el lado A del triangulo: \n");
 			scanf("%d",&ladoA);
 			fflush(stdin);
@@ -43,8 +43,8 @@ int main(int argc, char *argv[]) {
 			resultadoPerimetro=ladoA+ladoB+ladoC;
 			printf("El resultado es: %f\n", resultadoPerimetro);
 			break;
-		case 'C':
-			printf("Gracias por usar esta funcion :)\n");
+		case '3':
+			printf("Gracias por usar este menu 7u7\n");
 			break;
 		default:
 			printf("\nLa opcion no es la correcta, vuelva a intentar\n");
