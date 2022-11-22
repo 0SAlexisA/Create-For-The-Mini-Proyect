@@ -1,0 +1,39 @@
+#include<stdio.h>
+#define MAX 10
+
+//Matriz inversa
+
+int main(int argc, char** args)
+{
+int matriz[MAX][MAX], col, reng, i=0, j=0;
+		printf("Cuantas columnas necesitas ");
+			scanf("%d", &col);
+		printf("Cuantos renglones necesitas ");
+			scanf("%d", &reng);
+	for(i = 0;i < reng;i++)//Lee los datos que se nos otorgan es decir las columnas y renglones
+{
+	for(j = 0;j < col;j++){
+		printf("Cuales son los valores de [%d][%d]==>\t", i+1, j+1);
+			scanf("%d", &matriz[i][j]);
+}
+}
+
+		printf("\n\n\t\tMatriz original");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n");
+	for(i = 0;i < reng;i++){
+		printf("\n\t\t");
+	for(j = 0;j < col;j++){
+		printf(" %6d ", matriz[i][j]);
+}
+}
+
+		printf("\n\n\t\tMatriz transpuesta");//Imprime el tipo de matriz (inversa)
+		printf("\n\n");
+	for(i = 0;i < col;i++){
+		printf("\n\t\t");
+	for(j = 0;j < reng;j++){
+		printf(" %6d ", matriz[j][i]);
+}
+}
+		printf("\n\n\n");
+}
