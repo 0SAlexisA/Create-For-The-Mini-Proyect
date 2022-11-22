@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	float gradosC,gradosF,gradosK;
+	float conversionC,conversionF,conversionK;
+	int selec;
+	do
+	{
+		printf("Ingrese La Opción Que Requiera:\n1)Celcius a Kelvin y Farenheit\n2)Kelvin a Celcius y Farenheit\n3)Farenheit a Celcius y kelvin\n4)Regresar al menu\n");
+		scanf("%i",&selec);
+		fflush(stdin);
+		switch(selec)
+		{
+		case 1:
+			printf("Ingrese los datos \n");
+			scanf("%f",&gradosC);
+			fflush(stdin);
+			conversionF=(gradosC*(1.8))+32;
+			conversionK=gradosC+ 273.15;
+			printf("Los grados en Farenheit son los sigueintes: %f\n", conversionF);
+			printf("Los grados en Kelvin son los sigueintes: %f\n", conversionK);
+			fflush(stdin);
+			break;
+		case 2:
+			printf("Ingrese los datos \n");
+			scanf("%f",&gradosF);
+			fflush(stdin);
+			conversionC=(gradosF-32)*(.555);
+			conversionK=((.555)*(gradosF-32))+273.15;
+			printf("Los grados en Kelvin son los sigueintes: %f\n", conversionK);
+			printf("Los grados en Celcius son los sigueintes: %f\n", conversionC);
+			fflush(stdin);
+			break;
+		case 3:
+			printf("Ingrese los datos \n");
+			scanf("%f",&gradosK);
+			fflush(stdin);
+			conversionC=gradosK-273.15;
+			conversionF=((gradosK-273.15)*(1.8))+32;
+			printf("Los grados en Celcius son los sigueintes: %f\n", conversionC);
+			printf("Los grados en Farenheit son los sigueintes: %f\n", conversionF);
+			fflush(stdin);
+			break;
+		case 4:
+			printf("Espero Y Haya Sido De Utilidad :)\n");
+			break;
+		default:
+			printf("\nLa opcion no esta disponible, Intente Colocar Una De Las Opciones Disponibles\n");
+			fflush(stdin);
+			break;
+		}
+
+	}while(selec!=4);
+	return 0;
+}
