@@ -18,22 +18,15 @@ int  main(){
 	float gradosC,gradosF,gradosK;
 	float conversionC,conversionF,conversionK;
 	int selec;
+	
 	//caso 2
-	
-	
 	int ladoA,ladoB;
 	float resultadoArea;
 	float resultadoPerimetro;
 	
 	//caso 3
-	
 	int ladoC;
 	int altura;
-	
-	
-	
-
-	
 	
 	//caso 4
 	int F,C, i,j;
@@ -41,15 +34,12 @@ int  main(){
 	int macR[N][M];
 	
 	//caso 5
-
 	int matriz[MAX][MAX], col, reng;
+	
 	//Caso 6 
-	
-		int numero, factorial = 1;
-	
+	int numero, factorial = 1;
 	
 	//Caso 8
-	
 	float salarioSinIva=0;
 	float costoHora=0;
 	float horasLaboradas=0;
@@ -77,7 +67,7 @@ case 1:
 		{
 	do
 	{
-		printf("Ingrese Que Desea Obtener:\n1)Celcius a Kelvin y Farenheit\n2)Kelvin a Celcius y Farenheit\n3)Farenheit a Celcius y kelvin\n4)Regresar Al Menu\n");
+		printf("Ingrese Que Desea Obtener:\n1)Celcius a Kelvin y Farenheit\n2)Kelvin a Celcius y Farenheit\n3)Farenheit a Celcius y kelvin\n4)Terminar\n");
 		scanf("%i",&selec);
 		fflush(stdin);
 		switch(selec)
@@ -115,10 +105,8 @@ case 1:
 		case 4:
 			printf("Gracias Por Usar Este Programa 7u7 \n");
 			break;
-		default:
-			printf("\nLa Opcion No Es La Correcta, Vuelva A Intentar\n");
-			fflush(stdin);
-			break;
+		
+		;
 		}
 
 	}while(selec!=4);
@@ -133,7 +121,7 @@ case 2:
 		{
 		do
 	{
-		printf("Ingrese que desea obtener:\n1)Area Del Cuadrado\n2)Perimetro Del Cuadrado\n3)Area De Un Rectangulo\n4)Perimetro Del Rectangulo\n5)Regresar al menu\n");
+		printf("Ingrese que desea obtener:\n1)Area Del Cuadrado\n2)Perimetro Del Cuadrado\n3)Area De Un Rectangulo\n4)Perimetro Del Rectangulo\n5)Terminar\n");
 		scanf("%i",&selec);
 		fflush(stdin);
 		switch (selec)
@@ -193,7 +181,7 @@ break;
 	{
 		do
 	{
-		printf("\nIngrese que desea obtener:\n 1)Area de el triangulo\n 2)Perimetro de un triangulo\n 3)Regresar al menu\n");
+		printf("\nIngrese que desea obtener:\n 1)Area de el triangulo\n 2)Perimetro de un triangulo\n 3)Terminar\n");
 		scanf("%i",&selec);
 		fflush(stdin);
 		switch (selec)
@@ -314,7 +302,7 @@ break;
 }
 }
 
-		printf("\n\n\t\tMatriz 2*2");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n\t\tMatriz 2*2");//Toma la forma a la hora de imprimir teniendo en cuenta el codigo en base a i y j
 		printf("\n\n");
 	for(i = 0;i < reng;i++){
 		printf("\n\t\t");
@@ -338,7 +326,7 @@ break;
 }
 }
 
-		printf("\n\n\t\tMatriz");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n\t\tMatriz");//Toma la forma a la hora de imprimir teniendo en cuenta el codigo en base a i y j
 		printf("\n\n");
 	for(i = 0;i < reng;i++){
 		printf("\n\t\t");
@@ -387,7 +375,7 @@ break;
 			scanf("%d", &col);
 		printf("Cuantos Renglones Necesitas ");
 			scanf("%d", &reng);
-	for(i = 0;i < reng;i++)//Lee los datos que se nos otorgan es decir las columnas y renglones
+	for(i = 0;i < reng;i++)
 {
 	for(j = 0;j < col;j++){
 		printf("Cuales Son Los Valores De [%d][%d]==>\t", i+1, j+1);
@@ -395,7 +383,7 @@ break;
 }
 }
 
-		printf("\n\n\t\tMatriz Original");//Toma la forma a la hora de imprimir teniendo en cuenta el code en base a i y j
+		printf("\n\n\t\tMatriz Original");
 		printf("\n\n");
 	for(i = 0;i < reng;i++){
 		printf("\n\t\t");
@@ -418,7 +406,7 @@ break;
 //Salario		
 		
 		case 8:
-		printf("\n Opcion 8",opcion);
+		printf("\n",opcion);
 		
 	cout<<"Ingrese las horas trabajadas:\n";cin>>horasLaboradas;
 	cout<<"Ingrese la tarifa:\n";cin>>costoHora;
@@ -427,24 +415,24 @@ break;
 	cout<<"El salario sin iva es: \n"<<salarioSinIva;
 	
 	salarioConIva = (salarioSinIva * .16) + salarioSinIva ;
-	cout<<" \n El salario con iva es: \n"<<salarioConIva;
+	cout<<" \nEl salario con iva es: \n"<<salarioConIva;
 	
 	salarioRetencion =(salarioConIva *.12);
-	cout<<" \n La Retencion es: \n"<<salarioRetencion;
+	cout<<" \nLa Retencion es: \n"<<salarioRetencion;
 	
 	
 	salarioTotal = salarioConIva - salarioRetencion;
-	cout<<"\n El salario neto es: \n"<<salarioTotal;
+	cout<<"\nEl salario neto es: \n"<<salarioTotal;
 		
 	
 	if(salarioTotal<10000){
 		salarioTotal=(salarioTotal*.05) + salarioTotal;
-		cout<<"\n El salario del trabajador Con Abono es:"<<salarioTotal;
+		cout<<"\nEl salario del trabajador Con Abono es:"<<salarioTotal;
 	
 	}
 	else{
 		
-	cout<<"\n El salario del trabajador es:"<<salarioTotal;
+	cout<<"\nEl salario del trabajador es:"<<salarioTotal;
 	}
 	
 
@@ -468,6 +456,23 @@ break;
 		}
 	}while(opcion !=8);
 	return 0;
-	 //While la reiteraci[on del programa sea diferente a 7
+	 //While la reiteracion del programa sea diferente a 8
 
 }
+
+/*Querido programador:
+
+Cuando hice el codigo, solo dios y yo
+sabiamos como podria funcionar.
+Ahora,¡Solo dios lo sabe!
+
+Asi que si trata de tener una mejor optimización
+y fracasa, por favor, incremente 
+el contador de lineas y las horas perdidas
+para su optimización.
+
+Horas perdidas:
+Ultimo conteo de lineas: 473
+
+
+*/
